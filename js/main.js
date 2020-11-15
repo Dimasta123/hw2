@@ -1,23 +1,24 @@
-let firstNumber = '';
-let secondNumber = '';
-let sumOfTwoNumbers = 0;
-firstNumber = +prompt(
+let firstNumber = +prompt(
   'Пожалуйста введите первое целое число с которого нaчнем отчет',
 );
-secondNumber = +prompt(
+let secondNumber = +prompt(
   'Пожалуйста введите второе число до которого будем считать',
 );
-let countAllOrNotAll = confirm('будем счтать все числа или только не парные?');
+let sumOfTwoNumbers = 0;
+
+const skipEvenNumbers = confirm(
+  'будем счтать все числа или только не парные?',
+);
 let i = '';
 let j = '';
 
-if (countAllOrNotAll !== true) {
-  for (let i = firstNumber; i <= secondNumber; i++) {
+if (skipEvenNumbers !== true) {
+  for (i = firstNumber; i <= secondNumber; i++) {
     sumOfTwoNumbers += i;
   }
 } else {
-  for (let j = firstNumber; j <= secondNumber; j++) {
-    if (j % 2 === 0) {
+  for (j = firstNumber; j <= secondNumber; j++) {
+    if (j % 2 == 0) {
       continue;
     }
     sumOfTwoNumbers += j;
