@@ -12,7 +12,7 @@ const skipEvenNumbers = confirm(
 let i = '';
 let j = '';
 
-if (skipEvenNumbers !== true) {
+if (skipEvenNumbers === true) {
   for (i = firstNumber; i <= secondNumber; i++) {
     sumOfTwoNumbers += i;
   }
