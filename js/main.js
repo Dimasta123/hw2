@@ -7,7 +7,7 @@ let secondNumber = +prompt(
 let sumOfTwoNumbers = 0;
 
 const skipEvenNumbers = confirm(
-  'будем счтать все числа или только не парные?',
+  'будем считать все числа или только не парные да / нет?',
 );
 let i = '';
 let j = '';
