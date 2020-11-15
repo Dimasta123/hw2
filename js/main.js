@@ -18,7 +18,7 @@ if (skipEvenNumbers !== true) {
   }
 } else {
   for (j = firstNumber; j <= secondNumber; j++) {
-    if (j % 2 == 0) {
+    if (j % 2 === 0) {
       continue;
     }
     sumOfTwoNumbers += j;
