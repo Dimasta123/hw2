@@ -6,22 +6,22 @@ let secondNumber = +prompt(
 );
 let sumOfTwoNumbers = 0;
 
+while (Number.isNaN(firstNumber)) {
+  firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
+}
+while (Number.isNaN(secondNumber)) {
+  secondNumber = +prompt('Введите пожалуйста второе целое число ');
+}
+while (secondNumber < firstNumber) {
+  secondNumber = +prompt('Введите число которое будет больше чем первое!');
+}
 const countAllOrNotAll = confirm(
   'будем счтать все числа или только не парные?',
 );
-
-while (Number.isNaN(firstNumber) === true) {
-  firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
-}
-while (firstNumber < secondNumber && Number.isNaN(secondNumber) === true) {
-  secondNumber = +prompt(
-    'Введите пожалуйста второе целое число которое больше чем первое',
-  );
-}
 let i = '';
 let j = '';
 
-if (countAllOrNotAll === true) {
+if (countAllOrNotAll) {
   for (i = firstNumber; i <= secondNumber; i++) {
     sumOfTwoNumbers += i;
   }
@@ -34,3 +34,4 @@ if (countAllOrNotAll === true) {
   }
 }
 console.log(firstNumber, secondNumber, sumOfTwoNumbers);
+
