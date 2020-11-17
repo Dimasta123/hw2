@@ -6,13 +6,22 @@ let secondNumber = +prompt(
 );
 let sumOfTwoNumbers = 0;
 
-const skipEvenNumbers = confirm(
-  'будем считать все числа или только не парные да / нет?',
+const countAllOrNotAll = confirm(
+  'будем счтать все числа или только не парные?',
 );
+
+while (Number.isNaN(firstNumber) === true) {
+  firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
+}
+while (firstNumber < secondNumber && Number.isNaN(secondNumber) === true) {
+  secondNumber = +prompt(
+    'Введите пожалуйста второе целое число которое больше чем первое',
+  );
+}
 let i = '';
 let j = '';
 
-if (skipEvenNumbers === true) {
+if (countAllOrNotAll === true) {
   for (i = firstNumber; i <= secondNumber; i++) {
     sumOfTwoNumbers += i;
   }
