@@ -18,15 +18,14 @@ while (secondNumber < firstNumber) {
 const countAllOrNotAll = confirm(
   'будем счтать все числа или только не парные?',
 );
-let i = '';
-let j = '';
+
 
 if (countAllOrNotAll) {
-  for (i = firstNumber; i <= secondNumber; i++) {
+  for (var i = firstNumber; i <= secondNumber; i++) {
     sumOfTwoNumbers += i;
   }
 } else {
-  for (j = firstNumber; j <= secondNumber; j++) {
+  for (var j = firstNumber; j <= secondNumber; j++) {
     if (j % 2 === 0) {
       continue;
     }
