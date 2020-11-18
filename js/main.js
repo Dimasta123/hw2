@@ -9,9 +9,13 @@ let sumOfTwoNumbers = 0;
 while (Number.isNaN(firstNumber)) {
   firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
 }
+while (isIteger(firstNumber)) {
+  firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
 while (Number.isNaN(secondNumber)) {
   secondNumber = +prompt('Введите пожалуйста второе целое число ');
 }
+  while (isInteger(secondNumber)) {
+  secondNumber = +prompt('Введите пожалуйста второе целое число ');
 while (secondNumber < firstNumber) {
   secondNumber = +prompt('Введите число которое будет больше чем первое!');
 }
@@ -19,18 +23,13 @@ const countAllOrNotAll = confirm(
   'будем счтать все числа или только не парные?',
 );
 
-
-if (countAllOrNotAll) {
-  for (var i = firstNumber; i <= secondNumber; i++) {
-    sumOfTwoNumbers += i;
-  }
-} else {
-  for (var j = firstNumber; j <= secondNumber; j++) {
-    if (j % 2 === 0) {
-      continue;
-    }
-    sumOfTwoNumbers += j;
-  }
+ for (var i = firstNumber; i <= secondNumber; i++) 
+{if (countAllOrNotAll) 
+ sumOfTwoNumbers += i;
+     }
+} else { (i % 2 === 0)
+        sumOfTwoNumbers += i;
+  
 }
 console.log(firstNumber, secondNumber, sumOfTwoNumbers);
 
