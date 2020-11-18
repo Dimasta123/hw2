@@ -24,18 +24,11 @@ while (secondNumber < firstNumber) {
 const countAllOrNotAll = confirm(
   'будем счтать все числа или только не парные?',
 );
-
-if (countAllOrNotAll) {
-  for (var i = firstNumber; i <= secondNumber; i++) {
-    sumOfTwoNumbers += i;
+for (let i = firstNumber; i <= secondNumber; i++) {
+  if (countAllOrNotAll && i % 2 === 0) {
+    continue;
   }
-} else {
-  for (var j = firstNumber; j <= secondNumber; j++) {
-    if (j % 2 === 0) {
-      continue;
-    }
-    sumOfTwoNumbers += j;
-  }
+  sumOfTwoNumbers = sumOfTwoNumbers + i;
 }
 console.log(firstNumber, secondNumber, sumOfTwoNumbers);
 
