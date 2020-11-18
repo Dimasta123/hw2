@@ -29,7 +29,7 @@ const countAllOrNotAll = confirm(
 {if (countAllOrNotAll) 
  sumOfTwoNumbers += i;
      }
-} else { (i % 2 === 0)
+ else { (i % 2 === 0)
  sumOfTwoNumbers += i;
   
 }
