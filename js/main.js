@@ -9,7 +9,7 @@ let sumOfTwoNumbers = 0;
 while (Number.isNaN(firstNumber)) {
   firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
 }
-while (isIteger(firstNumber)) {
+while (isInteger(firstNumber)) {
   firstNumber = +prompt('Введите пожалуйста целое число с которого начнем ');
 while (Number.isNaN(secondNumber)) {
   secondNumber = +prompt('Введите пожалуйста второе целое число ');
